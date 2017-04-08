@@ -1,0 +1,22 @@
+<!--<h1>Selection MediaItem Preview</h1>-->
+<div [hidden]="isShow()" class ="popup">
+  <div class = "image-preview" ngif = "selectedImage">
+    <img [src] = 'mediaItem? mediaItem.imagePath:"" '>
+    <div class="arrow-back" (click)=navigate(false)>
+      &lt;
+   </div>
+   <div class="arrow-forward" (click)=navigate(true)>
+      &gt;
+   </div>
+  </div>
+  
+  <div>Name: {{ mediaItem? mediaItem.name:"" }}</div>
+  <div>Watched: {{ mediaItem? mediaItem.watchedOn:"" }}</div>
+  <div>Year: {{ mediaItem? mediaItem.year:"" }}</div>
+  <div>Category: {{ mediaItem? mediaItem.category:"" }}</div>
+  <div>
+    <a class="close" (click)="onClose()">
+    Close
+  </a>
+  </div>
+</div>

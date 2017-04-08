@@ -6,8 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['app/app.component.css']
 })
 export class AppComponent {
+  item=null;
   onMediaItemDelete(mediaItem) {
     
+  }
+  onMediaItemShow(mediaItem){
+    this.item=mediaItem;
+  }
+
+  onMediaItemClose(){
+    this.item=null;
   }
 
   firstMediaItem = {
@@ -17,6 +25,7 @@ export class AppComponent {
     category: "Science Fiction",
     year: 2010,
     watchedOn: 1294166565384,
-    isFavorite: false
+    isFavorite: false,
+    imagePath : ["media/01.png"]
   };
 }
